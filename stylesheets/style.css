@@ -1,0 +1,206 @@
+@charset "UTF-8";
+/* line 5, D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 4, ../scss/style.scss */
+body {
+  font-family: '微軟正黑體';
+  color: black;
+  font-size: 1.2rem;
+}
+/* line 9, ../scss/style.scss */
+body a {
+  text-decoration: initial;
+}
+
+/* line 14, ../scss/style.scss */
+.ui.grid, .ui.grid + .grid {
+  margin: 0;
+}
+
+/* line 18, ../scss/style.scss */
+.my-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem 1rem;
+  background: transparent;
+}
+/* line 23, ../scss/style.scss */
+.my-nav .navbar-brand {
+  font-family: "wt064";
+  font-size: 3.25rem;
+}
+/* line 28, ../scss/style.scss */
+.my-nav #nav-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  z-index: -1;
+}
+
+/* line 38, ../scss/style.scss */
+.section {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  padding: 7.5rem 10rem;
+  background: url(../images/沉香/bg1.jpg) center center/cover no-repeat fixed;
+}
+/* line 45, ../scss/style.scss */
+.section .blur-segment {
+  position: relative;
+  line-height: 1.5;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.75));
+  overflow: hidden;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.3) inset, 0 0.5em 1em rgba(0, 0, 0, 0.6);
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.3);
+}
+/* line 46, ../scss/style.scss */
+.section .blur-segment:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: -30px;
+  z-index: -1;
+  -webkit-filter: blur(4px);
+  filter: blur(4px);
+}
+/* line 58, ../scss/style.scss */
+.section .blur-segment .type-header {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+/* line 62, ../scss/style.scss */
+.section .blur-segment .intro-header {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+/* line 74, ../scss/style.scss */
+.section:first-child, .section:first-child .blur-segment:before {
+  background: url(../images/沉香/bg1.jpg) center center/cover no-repeat fixed;
+}
+/* line 77, ../scss/style.scss */
+.section:nth-child(2), .section:nth-child(2) .blur-segment:before {
+  background: url(../images/金絲楠木15公分/bg2.jpg) center center/cover no-repeat fixed;
+}
+/* line 79, ../scss/style.scss */
+.section:nth-child(2) .blur-segment, .section:nth-child(2) .blur-segment:before .blur-segment {
+  background: linear-gradient(-45deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.75));
+}
+/* line 83, ../scss/style.scss */
+.section:nth-child(3), .section:nth-child(3) .blur-segment:before {
+  background: url(../images/金絲楠木30公分/bg3.jpg) center center/cover no-repeat fixed;
+}
+/* line 86, ../scss/style.scss */
+.section:last-child, .section:last-child .blur-segment:before {
+  background: url(../images/海南黃花梨/bg4.jpg) center center/cover no-repeat fixed;
+}
+/* line 88, ../scss/style.scss */
+.section:last-child .blur-segment, .section:last-child .blur-segment:before .blur-segment {
+  background: linear-gradient(-45deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.75));
+}
+/* line 94, ../scss/style.scss */
+.section .carousel-container .intro-carousel {
+  background: aqua;
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  left: 0;
+  top: 0;
+  text-align: center;
+  font-family: "wt064";
+}
+/* line 104, ../scss/style.scss */
+.section .carousel-container .image {
+  height: 500px;
+}
+/* line 107, ../scss/style.scss */
+.section .carousel-container .owl-item {
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0) scale(1, 1);
+}
+/* line 113, ../scss/style.scss */
+.section .carousel-container .owl-theme .owl-dots .owl-dot.owl-dot.active span, .section .carousel-container .owl-theme .owl-dots .owl-dot.owl-dot:hover span {
+  background: url(../images/wt1.png) center center/cover no-repeat;
+}
+/* line 117, ../scss/style.scss */
+.section .carousel-container .owl-theme .owl-dots .owl-dot span {
+  width: 80px;
+  height: 12px;
+  margin: 5px 10px;
+  background: url(../images/wt2.jpg) center center/cover no-repeat;
+}
+/* line 125, ../scss/style.scss */
+.section .ui.basic.segment {
+  border-radius: 0;
+  border: none;
+}
