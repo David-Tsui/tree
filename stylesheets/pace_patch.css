@@ -1,0 +1,21 @@
+/* line 1, ../scss/pace_patch.scss */
+.pace {
+  box-sizing: content-box;
+}
+/* line 3, ../scss/pace_patch.scss */
+.pace .pace-activity {
+  box-sizing: content-box;
+}
+/* line 5, ../scss/pace_patch.scss */
+.pace .pace-activity:before {
+  box-sizing: content-box;
+}
+/* line 9, ../scss/pace_patch.scss */
+.pace .pace-progress {
+  box-sizing: content-box;
+}
+
+/* line 14, ../scss/pace_patch.scss */
+.pace-progress-inner {
+  box-sizing: content-box;
+}

@@ -64,55 +64,180 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 4, ../scss/style.scss */
+/* line 6, ../scss/style.scss */
 body {
+  background: #411A08;
   font-family: '微軟正黑體';
-  color: black;
   font-size: 1.2rem;
+  color: black;
 }
-/* line 9, ../scss/style.scss */
+/* line 13, ../scss/style.scss */
 body a {
   text-decoration: initial;
 }
+/* line 17, ../scss/style.scss */
+body .all-wrap {
+  z-index: -1;
+}
 
-/* line 14, ../scss/style.scss */
+/* line 23, ../scss/style.scss */
 .ui.grid, .ui.grid + .grid {
   margin: 0;
 }
 
-/* line 18, ../scss/style.scss */
-.my-nav {
+/* line 27, ../scss/style.scss */
+.loading {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(45deg, #f8d36b, #ff8b65);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1.25rem 1rem;
-  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  font-size: 2rem;
 }
-/* line 23, ../scss/style.scss */
-.my-nav .navbar-brand {
+
+/* line 41, ../scss/style.scss */
+.intro {
+  width: 100%;
+  min-height: 110vh;
+  padding: 8rem 5rem 5rem;
+  background: url(../images/bg.jpg) center center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  line-height: 1.5;
+}
+/* line 53, ../scss/style.scss */
+.intro #intro-nails-left {
+  position: absolute;
+  top: 15px;
+  width: 40px;
+  left: 25px;
+}
+/* line 60, ../scss/style.scss */
+.intro #intro-nails-right {
+  position: absolute;
+  top: 15px;
+  width: 40px;
+  right: 25px;
+  transform: rotate(180deg);
+}
+/* line 68, ../scss/style.scss */
+.intro .content {
+  width: 45%;
+  background-color: #e69c2e;
+  background-image: url(../images/clean-gray-paper.png);
+}
+/* line 73, ../scss/style.scss */
+.intro .content p {
+  font-size: 1.35rem;
   font-family: "wt064";
-  font-size: 3.25rem;
 }
-/* line 28, ../scss/style.scss */
-.my-nav #nav-bg {
+/* line 77, ../scss/style.scss */
+.intro .content p:first-child {
+  text-align: center;
+  font-size: 2.25rem;
+  color: #690707;
+}
+
+/* line 85, ../scss/style.scss */
+.main {
+  position: relative;
+}
+
+/* line 89, ../scss/style.scss */
+.nav-wrap {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+/* line 95, ../scss/style.scss */
+.nav-wrap #nav-bg {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100px;
   z-index: -1;
+  padding: 0 !important;
+}
+/* line 104, ../scss/style.scss */
+.nav-wrap .my-nav {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+/* line 114, ../scss/style.scss */
+.nav-wrap .my-nav .ui.menu {
+  background: transparent;
+  padding: 0 4rem;
+  border: none;
+  box-shadow: none;
+}
+/* line 119, ../scss/style.scss */
+.nav-wrap .my-nav .ui.menu .item {
+  padding: 1.25rem 2rem;
+  margin-top: -12px;
+}
+/* line 122, ../scss/style.scss */
+.nav-wrap .my-nav .ui.menu .item.navbar-brand {
+  font-family: "wt064";
+  font-size: 3rem;
+}
+/* line 126, ../scss/style.scss */
+.nav-wrap .my-nav .ui.menu .item:not(.navbar-brand) {
+  font-size: 1.5rem;
+}
+/* line 129, ../scss/style.scss */
+.nav-wrap .my-nav .ui.menu .item:before {
+  background: none;
+}
+/* line 133, ../scss/style.scss */
+.nav-wrap .my-nav .ui.menu.vertical {
+  display: none;
+}
+/* line 137, ../scss/style.scss */
+.nav-wrap .my-nav.second-state {
+  height: 50px;
 }
 
-/* line 38, ../scss/style.scss */
+/* line 143, ../scss/style.scss */
 .section {
   position: relative;
   z-index: 1;
   width: 100%;
-  height: 100vh;
-  padding: 7.5rem 10rem;
-  background: url(../images/沉香/bg1.jpg) center center/cover no-repeat fixed;
+  height: 120vh;
+  padding: 7.5rem 6rem;
+  background: url(../images/沉香/bg1.jpg) center center/cover no-repeat;
 }
-/* line 45, ../scss/style.scss */
+/* line 150, ../scss/style.scss */
+.section .unhide-eye {
+  position: absolute;
+  left: 50%;
+  z-index: 1;
+}
+/* line 154, ../scss/style.scss */
+.section .unhide-eye i {
+  font-size: 3.5rem;
+  color: #222;
+  cursor: pointer;
+}
+/* line 158, ../scss/style.scss */
+.section .unhide-eye i.active {
+  color: #FF8282;
+}
+/* line 163, ../scss/style.scss */
 .section .blur-segment {
   position: relative;
   line-height: 1.5;
@@ -120,9 +245,11 @@ body a {
   overflow: hidden;
   box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.3) inset, 0 0.5em 1em rgba(0, 0, 0, 0.6);
   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.3);
+  font-weight: 700;
 }
-/* line 46, ../scss/style.scss */
-.section .blur-segment:before {
+/* line 171, ../scss/style.scss */
+.section .blur-segment.first:before {
+  background: url(../images/沉香/bg1.jpg) center center/cover no-repeat;
   content: '';
   position: absolute;
   top: 0;
@@ -134,73 +261,201 @@ body a {
   -webkit-filter: blur(4px);
   filter: blur(4px);
 }
-/* line 58, ../scss/style.scss */
-.section .blur-segment .type-header {
-  font-size: 1.8rem;
+/* line 184, ../scss/style.scss */
+.section .blur-segment.second:before {
+  background: url(../images/金絲楠木15公分/bg2.jpg) center center/cover no-repeat;
+}
+/* line 187, ../scss/style.scss */
+.section .blur-segment.third:before {
+  background: url(../images/海南黃花梨/bg4.jpg) center center/cover no-repeat;
+}
+/* line 191, ../scss/style.scss */
+.section .blur-segment .ui.tabular.menu.mobile-sell {
+  display: none;
+}
+/* line 195, ../scss/style.scss */
+.section .blur-segment .ui.tabular.menu.computer-sell .item {
+  font-size: 1.5rem;
   font-weight: 700;
 }
-/* line 62, ../scss/style.scss */
-.section .blur-segment .intro-header {
-  font-size: 1.4rem;
-  font-weight: 500;
+/* line 199, ../scss/style.scss */
+.section .blur-segment .ui.tabular.menu.computer-sell .item:not(.active) {
+  background: rgba(124, 24, 5, 0.42);
 }
-/* line 74, ../scss/style.scss */
-.section:first-child, .section:first-child .blur-segment:before {
-  background: url(../images/沉香/bg1.jpg) center center/cover no-repeat fixed;
+/* line 204, ../scss/style.scss */
+.section .blur-segment .ui.tab.segment {
+  background: transparent;
+  padding: 0;
+  border: none;
+  box-shadow: none;
 }
-/* line 77, ../scss/style.scss */
-.section:nth-child(2), .section:nth-child(2) .blur-segment:before {
-  background: url(../images/金絲楠木15公分/bg2.jpg) center center/cover no-repeat fixed;
+/* line 209, ../scss/style.scss */
+.section .blur-segment .ui.tab.segment .ui.basic.segment {
+  border-radius: 0;
+  border: none;
 }
-/* line 79, ../scss/style.scss */
-.section:nth-child(2) .blur-segment, .section:nth-child(2) .blur-segment:before .blur-segment {
-  background: linear-gradient(-45deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.75));
+/* line 212, ../scss/style.scss */
+.section .blur-segment .ui.tab.segment .ui.basic.segment .type-header {
+  font-size: 2.5rem;
+  font-family: "wt064";
 }
-/* line 83, ../scss/style.scss */
-.section:nth-child(3), .section:nth-child(3) .blur-segment:before {
-  background: url(../images/金絲楠木30公分/bg3.jpg) center center/cover no-repeat fixed;
+/* line 216, ../scss/style.scss */
+.section .blur-segment .ui.tab.segment .ui.basic.segment .intro-header {
+  font-size: 1.6rem;
 }
-/* line 86, ../scss/style.scss */
-.section:last-child, .section:last-child .blur-segment:before {
-  background: url(../images/海南黃花梨/bg4.jpg) center center/cover no-repeat fixed;
-}
-/* line 88, ../scss/style.scss */
-.section:last-child .blur-segment, .section:last-child .blur-segment:before .blur-segment {
-  background: linear-gradient(-45deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.75));
-}
-/* line 94, ../scss/style.scss */
+/* line 224, ../scss/style.scss */
 .section .carousel-container .intro-carousel {
-  background: aqua;
   width: 100%;
+  color: white;
   padding-left: 1rem;
   padding-right: 1rem;
   left: 0;
   top: 0;
   text-align: center;
+  background: linear-gradient(90deg, #5f3106 12%, #804905 50%, #5f3106 88%);
   font-family: "wt064";
+  font-size: 1.35rem;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
 }
-/* line 104, ../scss/style.scss */
+/* line 238, ../scss/style.scss */
 .section .carousel-container .image {
-  height: 500px;
+  max-height: 500px;
+  cursor: w-resize;
 }
-/* line 107, ../scss/style.scss */
+/* line 244, ../scss/style.scss */
 .section .carousel-container .owl-item {
   -webkit-backface-visibility: hidden;
   -webkit-transform: translateZ(0) scale(1, 1);
 }
-/* line 113, ../scss/style.scss */
+/* line 252, ../scss/style.scss */
 .section .carousel-container .owl-theme .owl-dots .owl-dot.owl-dot.active span, .section .carousel-container .owl-theme .owl-dots .owl-dot.owl-dot:hover span {
   background: url(../images/wt1.png) center center/cover no-repeat;
 }
-/* line 117, ../scss/style.scss */
+/* line 256, ../scss/style.scss */
 .section .carousel-container .owl-theme .owl-dots .owl-dot span {
-  width: 80px;
+  width: 60px;
   height: 12px;
   margin: 5px 10px;
   background: url(../images/wt2.jpg) center center/cover no-repeat;
 }
-/* line 125, ../scss/style.scss */
-.section .ui.basic.segment {
-  border-radius: 0;
-  border: none;
+
+/* line 266, ../scss/style.scss */
+footer {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  z-index: 2;
+  color: white;
+}
+/* line 272, ../scss/style.scss */
+footer .column {
+  text-align: center;
+  background: #411A08;
+}
+/* line 275, ../scss/style.scss */
+footer .column p {
+  font-size: 2.2rem;
+}
+/* line 278, ../scss/style.scss */
+footer .column .ui.list {
+  font-size: 1.4rem;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 286, ../scss/style.scss */
+  .nav-wrap #nav-bg {
+    height: 100px;
+  }
+  /* line 289, ../scss/style.scss */
+  .nav-wrap .my-nav.my-nav.my-nav.my-nav {
+    padding: 1.6rem 0;
+  }
+  /* line 291, ../scss/style.scss */
+  .nav-wrap .my-nav.my-nav.my-nav.my-nav .ui.menu {
+    padding: 0 2rem;
+  }
+  /* line 293, ../scss/style.scss */
+  .nav-wrap .my-nav.my-nav.my-nav.my-nav .ui.menu .item {
+    margin-top: 2px;
+  }
+  /* line 302, ../scss/style.scss */
+  .nav-wrap .my-nav.my-nav.my-nav.my-nav .ui.menu.vertical {
+    width: 100%;
+    background: linear-gradient(rgba(120, 15, 15, 0.69), rgba(0, 0, 0, 0.82));
+    -moz-animation-duration: 0.25s;
+    -webkit-animation-duration: 0.25s;
+    animation-duration: 0.25s;
+    -moz-animation-delay: 0s;
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+  }
+  /* line 305, ../scss/style.scss */
+  .nav-wrap .my-nav.my-nav.my-nav.my-nav .ui.menu.vertical .item {
+    color: #FAEBD7;
+  }
+
+  /* line 318, ../scss/style.scss */
+  .intro {
+    padding: 8rem 1rem 5rem;
+  }
+  /* line 320, ../scss/style.scss */
+  .intro .content {
+    width: 100%;
+  }
+
+  /* line 327, ../scss/style.scss */
+  .section .blur-segment .ui.tabular.menu.mobile-sell {
+    display: block;
+  }
+  /* line 330, ../scss/style.scss */
+  .section .blur-segment .ui.tabular.menu.computer-sell {
+    display: none;
+  }
+}
+@media only screen and (max-width: 500px) {
+  /* line 339, ../scss/style.scss */
+  .section {
+    height: auto;
+    min-height: 120vh;
+    padding: 5rem 1rem;
+  }
+  /* line 343, ../scss/style.scss */
+  .section .unhide-eye {
+    left: 40%;
+    top: 6px;
+  }
+
+  /* line 349, ../scss/style.scss */
+  .nav-wrap .my-nav.my-nav.my-nav.my-nav {
+    padding: 1.6rem 0;
+  }
+  /* line 351, ../scss/style.scss */
+  .nav-wrap .my-nav.my-nav.my-nav.my-nav .ui.menu {
+    padding: 0;
+  }
+  /* line 361, ../scss/style.scss */
+  .nav-wrap .my-nav.my-nav.my-nav.my-nav .ui.menu.vertical {
+    width: 100%;
+    background: linear-gradient(rgba(120, 15, 15, 0.69), rgba(0, 0, 0, 0.82));
+    -moz-animation-duration: 0.5s;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    -moz-animation-delay: 0s;
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+  }
+  /* line 364, ../scss/style.scss */
+  .nav-wrap .my-nav.my-nav.my-nav.my-nav .ui.menu.vertical .item {
+    color: #FAEBD7;
+  }
+
+  /* line 377, ../scss/style.scss */
+  .intro {
+    padding: 8rem 1rem 5rem;
+  }
+  /* line 379, ../scss/style.scss */
+  .intro .content {
+    width: 100%;
+  }
 }
